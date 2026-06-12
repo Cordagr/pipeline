@@ -125,6 +125,7 @@ func TestInitTracing(t *testing.T) {
 	}
 }
 
+// TestReconcilerApplyPathsEmitSpans verifies that the reconciler is using the configured tracer provider and that spans are emitted for the various helper functions called by applyParamsContextsResultsAndWorkspaces.
 func TestReconcilerApplyPathsEmitSpans(t *testing.T) {
 	otel.SetTextMapPropagator(propagation.TraceContext{})
 
