@@ -520,6 +520,7 @@ func ApplyWorkspaces(ctx context.Context, tracer trace.Tracer, spec *v1.TaskSpec
 	_, span := tracer.Start(ctx, "ApplyWorkspaces")
 	defer span.End()
 
+
 	stringReplacements := map[string]string{}
 
 	bindNames := sets.NewString()
@@ -672,6 +673,7 @@ func getArtifactReplacements(step v1.Step, idx int) map[string]string {
 func ApplyStepExitCodePath(ctx context.Context, tracer trace.Tracer, spec *v1.TaskSpec) *v1.TaskSpec {
 	_, span := tracer.Start(ctx, "ApplyStepExitCodePath")
 	defer span.End()
+
 
 	stringReplacements := map[string]string{}
 
